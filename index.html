@@ -1320,9 +1320,10 @@
 роботи в бізнесі.</div>
         </div>
     </div>
+
     <div class="row">
         <div class="col-xs-12 mobile_carousel">
-        <div id="owl-example" class="owl-carousel">
+        <div class="owl-carousel">
         <div>
             <img src="img/roman.png" class="img-responsive img-mobile">
             <h3>Роман Кульчинський</h3>
@@ -1367,15 +1368,56 @@
     </div>
 </section>
 
+<section id="government">
+    <hr id="hr4">
+    <h2>Правління</h2>
+     <div class="row rowimg2">
+         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  teamimg">
+            <img src="img/danylov.png" class="img-responsive fadeinblock" >
+            <h3>Сергій Данилов</h3>
+            <div class="position"> Голова правління. Заступник директора Центру близькосхідних досліджень</div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 teamimg">
+            <img src="img/pyrkalo.png" class="img-responsive fadeinblock" >
+            <h3>Світлaна Пиркало</h3>
+            <div class="position"> Член правління. Працює в Європейському банку реконструкції та розвитку. </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 teamimg">
+            <img src="img/akymenko.png" class="img-responsive fadeinblock" >
+            <h3>Олександр Акименко</h3>
+            <div class="position"> Член правління. Співзасновник platfor.ma, колишній заступник редактора журналістських рослідувань в Forbes Ukraine. </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 mobile_carousel">
+        <div class="owl-carousel">
+        <div>
+            <img src="img/danylov.png" class="img-responsive img-mobile">
+            <h3>Сергій Данилов</h3>
+            <div class="position">Голова правління. Заступник директора Центру близькосхідних досліджень</div>
+        </div>
+        <div>
+            <img src="img/pyrkalo.png" class="img-responsive img-mobile">
+            <h3>Світлaна Пиркало</h3>
+            <div class="position">Член правління. Працює в Європейському банку реконструкції та розвитку. </div>
+        </div>
+        <div>
+            <img src="img/akymenko.png" class="img-responsive img-mobile">
+            <h3>Олександр Акименко</h3>
+            <div class="position"> Член правління. Співзасновник platfor.ma, колишній заступник редактора журналістських рослідувань в Forbes Ukraine.</div>
+        </div>
+</div>
+</section>
+
 <section>
     <div id = "analytics" class="row rowIcons">
          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 analyticsbox">
-            <hr id="hr4">
+            <hr id="hr5">
             <h2>Аналітика</h2>
             <div class = "analytics"> <a class="dotted" href="http://texty.org.ua/d/longs/dnipro2/">Вкрадений Дніпро: Інтерактивний "long-read"</a></div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-            <hr id="hr5">
+            <hr id="hr6">
             <h2>Фінансування</h2>
              <div class = "analytics"><a class="dotted" href="http://texty.org.ua/pdf/Zvit_2014.pdf"> Річний звіт "Текстів"<a></div>
         </div>
@@ -1599,18 +1641,29 @@ var waypoint3 = new Waypoint({
 var waypoint4 = new Waypoint({
   element: document.getElementById('team'),
   handler: function(direction) {
-    $("#hr3").animate({width: "25%"}, 500);
+    $("#hr3").animate({width: "20%"}, 500);
   },
   offset: 300 
 })
 
 var waypoint5 = new Waypoint({
-  element: document.getElementById('analytics'),
+  element: document.getElementById('government'),
   handler: function(direction) {
-    $("#hr4, #hr5").animate({width: "25%"}, 500);
+    $("#hr4").animate({width: "20%"}, 500);
   },
   offset: 300 
 })
+
+var waypoint6 = new Waypoint({
+  element: document.getElementById('analytics'),
+  handler: function(direction) {
+    $("#hr5, #hr6").animate({width: "25%"}, 500);
+  },
+  offset: 300 
+})
+
+
+
 //story animation
 
 
@@ -1653,13 +1706,14 @@ var smallStoryPadding  = (bigStories - threeSmallStories) / 3 ;
 $('.ssp').css("padding-bottom", smallStoryPadding);
 
 // mobile 
-  $("#owl-example").owlCarousel({
-
-      navigation : true, // Show next and prev buttons
+ 
+  $(".owl-carousel").owlCarousel({
+navigation : true, // Show next and prev buttons
       slideSpeed : 300,
       paginationSpeed : 400,
       singleItem:true
   });
+
 
 </script>
 
