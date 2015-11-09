@@ -1548,7 +1548,7 @@
 
  // ramdom rectangles 
 function makeDiv(){
-    var divsize = ((Math.random()*10) + 10).toFixed();
+    var divsize = ((Math.random()*10) + 7).toFixed();
     var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
       for (var i = 0; i < 10; i++) {
         var $newdiv = $('<div/>', {
@@ -1566,14 +1566,12 @@ function makeDiv(){
         'left':posx+'px',
         'top':posy+'px',
         'display':'none'
-    }).appendTo( '#randomRect' ).fadeIn(100).delay(300).fadeOut(4500, function(){
-       $(this).remove();
-    }); 
+    }).appendTo( '#randomRect' ).fadeIn(100);
 }
 };
 
 function makeDiv2(){
-    var divsize = ((Math.random()*10) + 10).toFixed();
+    var divsize = ((Math.random()*10) + 7).toFixed();
     var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
       for (var i = 0; i < 10; i++) {
         var $newdiv = $('<div/>', {
@@ -1591,21 +1589,16 @@ function makeDiv2(){
         'left':posx+'px',
         'top':posy+'px',
         'display':'none'
-    }).appendTo( '#randomRect2' ).fadeIn(100).delay(300).fadeOut(6500, function(){
-       $(this).remove();
-    }); 
+    }).appendTo( '#randomRect2' ).fadeIn(100);
 }
 };
 
+//repete move
 
- $(document).ready(function(){
-        makeDiv();
-        var tt = setInterval(makeDiv,4000);
-         makeDiv2();
-        var tt = setInterval(makeDiv2,6000);
-    });
+    makeDiv();
+     makeDiv2();
 
- 
+
 
  // animate hr
 var waypoint1 = new Waypoint({
